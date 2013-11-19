@@ -12,8 +12,13 @@
 	
 $(document).ready(function() {
 	var interval = 5000;
-	
-	//initial load
+	var new_member = '<tr class="status-pending"><td class="icon"><i class="icon-exchange"></i></td>'+
+           	'<td>[NAME]</td><td>[CITY]</td><td><div class="btn-group">'+
+			'<button class="btn btn-mini btn-default dropdown-toggle" data-toggle="dropdown">'+
+            '<i class="icon-cog"></i></button><ul class="dropdown-menu"><li><a href="/admin/accept/[ID]">Accept</a></li>'+
+            '<li><a href="/admin/declined/[ID]">Decline</a></li></ul></div></td></tr>';
+			
+	//initial load;
 	$('.content-toggle').hide();
 	$('#dashboard').show();
 	
@@ -138,7 +143,6 @@ $(document).ready(function() {
 	});
 	
 	function checkNewRegister() {
-		
 		$.ajax({
 			type 		: 'GET',
 			dataType 	: 'json',
@@ -147,7 +151,18 @@ $(document).ready(function() {
 				
 				//if there is a new register user
 				if(data2.count > 0) {
+					
+					$('#new-member tbody').html('');
 					$('#user-counter').html(data2.count);
+					for(i in data2.row) { 
+						//append to table
+						$('#new-member tbody').append(new_member.
+							replace('[NAME]', data2.row[i].firstname+' '+data2.row[i].surname).
+							replace('[CITY]', data2.row[i].city).
+							replace('[ID]', data2.row[i].id).
+							replace('[ID]', data2.row[i].id)
+						);		
+					}
 				}
 			}, 
 			error : function(e) {

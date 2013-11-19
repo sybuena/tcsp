@@ -158,12 +158,13 @@ $(document).ready(function() {
 			'firstname'		: $('#firstname').val(),
 			'surname'		: $('#surname').val(),
 			'email'			: $('#email').val(),
-			//'address'		: $('#address').val(),
-			//'city'			: $('#city').val(),
+			'address'		: $('#address').val(),
+			'mobile-number'		: $('#address').val(),
+			'city'			: $('#city').val(),
 			'postal-code'			: $('#postal-code').val(),
 			'company-name' 			: $('#company-name').val(),
-			//'company-city'			: $('#company-city').val(),
-			//'company-address'		: $('#company-address').val(),
+			'company-city'			: $('#company-city').val(),
+			'company-address'		: $('#company-address').val(),
 			'company-postal-code'	: $('#company-address').val(),
 			'position'				: $('#position').val(),
 			'company-land-number'	: $('#company-address').val(),
@@ -207,7 +208,7 @@ $(document).ready(function() {
 			}
 		} else {
 			$('#mobile-number').prev().hide();
-			$('#mobile-number').removeClass('error')
+			//$('#mobile-number').removeClass('error')
 			
 		}
 		

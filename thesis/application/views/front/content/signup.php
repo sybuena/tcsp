@@ -31,15 +31,15 @@
           <label><span class="error">*</span> Surname</label>  
           <input type="text" id="surname" class="input-block-level placeholder" placeholder="">
           <label><span class="error">*</span> Full Address (House # / Street Name/ Province)</label>  
-          <input type="text" id="number" class="placeholder span1" placeholder="">
-          <input type="text" id="street" class=" placeholder span2" placeholder="">
-          <input type="text" id="province" class=" placeholder span2" placeholder="">
+          <input type="text" id="address" class="placeholder" placeholder="">
+          <label><span class="error">*</span> City</label>
+          <input type="text" id="city" class="input-block-level placeholder" placeholder="">
           <label><span class="error">*</span> Postal Code</label>  
           <input type="text" id="postal-code" class="input-block-level placeholder" placeholder="">
           <label>Landline Number</label>
           <small class="help-inline error display-none"><i>Landline number length must be 8</i></small>    
           <input type="text" id="land-number" class="input-block-level placeholder" maxlength="8">
-          <label>Mobile Number *</label>  
+          <label><span class="error">*</span> Mobile Number</label>  
           <small class="help-inline error display-none"><i>Mobile number length must be 11</i></small>  
           <input type="text" id="mobile-number" class="input-block-level placeholder" maxlength="11">
          
@@ -72,9 +72,9 @@
           	<option value="secretary">Secretary</option>
           </select>
           <label><span class="error">*</span> Full Address (House # / Street Name/ Province)</label>  
-          <input type="text" id="company-number" class="placeholder span1" placeholder="">
-          <input type="text" id="company-street" class=" placeholder span2" placeholder="">
-          <input type="text" id="company-province" class=" placeholder span2" placeholder="">
+          <input type="text" id="company-address" class="placeholder" placeholder="">
+          <label><span class="error">*</span> Company City</label>
+          <input type="text" id="company-city" class="input-block-level placeholder" placeholder="">
           <label><span class="error">*</span> Company Postal Code</label>
           <input type="text" id="company-postal-code" class="input-block-level placeholder" placeholder="">
           <label><span class="error">*</span> Company Landline Number</label>

@@ -7,7 +7,7 @@
     </div>
     
     <div class="box-content">
-    <table class="table table-normal">
+    <table class="table table-normal" id="new-member">
         <thead>
           <tr>
             <td></td>
