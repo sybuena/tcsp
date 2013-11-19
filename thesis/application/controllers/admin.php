@@ -100,4 +100,15 @@ class admin extends MY_Controller {
    		redirect('admin#users', 'refresh');
 	}
 	
+	public function logout() {
+		$res = $this->session->userdata('logged_in');
+		
+		$this->db->where('id', $res['id']);
+		$this->db->update('user', array('online'=>0));
+			
+   		$this->session->unset_userdata('logged_in');
+		
+   		redirect('admin', 'refresh');
+ 	}
+	
 }
