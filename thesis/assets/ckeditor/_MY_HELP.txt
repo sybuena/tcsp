@@ -1,0 +1,10 @@
+
+Main Functions for handling contents
+	http://docs.cksource.com/ckeditor_api/symbols/CKEDITOR.editor.html
+
+Insert Text at the Carret
+	CKEDITOR.instances.customMessage.insertHtml('<a>hello</a>');
+	
+Templates: basic info
+	http://docs.cksource.com/CKEditor_3.x/Developers_Guide/Templates
+
