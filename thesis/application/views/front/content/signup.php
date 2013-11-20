@@ -31,7 +31,7 @@
           <label><span class="error">*</span> Surname</label>  
           <input type="text" id="surname" class="input-block-level placeholder" placeholder="">
           <label><span class="error">*</span> Full Address (House # / Street Name/ Province)</label>  
-          <input type="text" id="address" class="placeholder" placeholder="">
+          <input type="text" id="address" class="input-block-level placeholder" placeholder="">
           <label><span class="error">*</span> City</label>
           <input type="text" id="city" class="input-block-level placeholder" placeholder="">
           <label><span class="error">*</span> Postal Code</label>  
@@ -72,7 +72,7 @@
           	<option value="secretary">Secretary</option>
           </select>
           <label><span class="error">*</span> Full Address (House # / Street Name/ Province)</label>  
-          <input type="text" id="company-address" class="placeholder" placeholder="">
+          <input type="text" id="company-address" class="placeholder input-block-level" placeholder="">
           <label><span class="error">*</span> Company City</label>
           <input type="text" id="company-city" class="input-block-level placeholder" placeholder="">
           <label><span class="error">*</span> Company Postal Code</label>
