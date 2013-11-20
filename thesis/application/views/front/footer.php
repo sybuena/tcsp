@@ -1,4 +1,4 @@
-<footer id="footer">
+<footer id="footer" style="font-size: 14px">
 	<div class="container">
     	<div class="row">
         	<div class="span3 col">
