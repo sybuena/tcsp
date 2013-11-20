@@ -35,15 +35,13 @@
 	<?php include('front/content/contact.php');?>
 </div>
 
-<div id="News" class="content-toggle" style="display:none">
-	<?php include('front/content/event.php');?>
-</div>
 
 <div id="History" class="content-toggle" style="display:none">
 	<?php include('front/content/about.php');?>
 </div>
 
 <div id="Team" class="content-toggle" style="display:none">
+
 	<?php include('front/content/ateam.php');?>
 </div>
 
@@ -57,6 +55,9 @@
 
 <div id="Privacy" class="content-toggle" style="display:none">
 	<?php include('front/content/privacy.php');?>
+</div>
+<div id="News" class="content-toggle" style="display:none">
+	<?php include('front/content/event.php');?>
 </div>
 
 <!-- Load all modal here -->
