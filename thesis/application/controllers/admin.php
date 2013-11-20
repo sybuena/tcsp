@@ -73,7 +73,7 @@ class admin extends MY_Controller {
 		$this->db->where('ID', $id);
 		$this->db->update('message', array('is_mark'=>1));
 		
-   		redirect('admin$message', 'refresh');
+   		redirect('admin/#message', 'refresh');
 	}
 	
 	public function remove($ID) {
