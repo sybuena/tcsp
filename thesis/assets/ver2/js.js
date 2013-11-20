@@ -167,7 +167,7 @@ $(document).ready(function() {
 			'company-address'		: $('#company-address').val(),
 			'company-postal-code'	: $('#company-address').val(),
 			'position'				: $('#position').val(),
-			'company-land-number'	: $('#company-address').val(),
+			'company-land-number'	: $('#company-land-number').val(),
 		};
 	
 		var subs = {
@@ -261,7 +261,7 @@ $(document).ready(function() {
 		} else {
 				
 			$('#company-land-number').prev().hide();
-			$('#company-land-number').removeClass('error')
+			//$('#company-land-number').removeClass('error')
 		}
 		
 		//check if email is valid
