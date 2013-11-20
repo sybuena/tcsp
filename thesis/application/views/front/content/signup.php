@@ -21,7 +21,7 @@
             </div> 
           <h5>Membership Plan</h5>
           <label><span class="error">*</span> Subscription plan</label>
-          <h5 id="subscription-plan">New Member</h5>
+          <input type="text" id="subscription" placeholder="" value="New Member" disabled="disabled">
           <label><span class="error">*</span> Price plan</label>
           <input type="text" id="price-plan" placeholder="" value="Php 1500.00" disabled="disabled">
           <hr>
