@@ -31,7 +31,7 @@ class MY_Controller extends CI_Controller {
 		
 		if($this->form_validation->run() == FALSE) {
 		 	//Field validation failed.  User redirected to login page
-			$this->load->adminTemplate('admin/test');
+			$this->load->adminTemplate('admin/login');
 		} else {
 		 	//Go to private area
 		 	redirect('admin', 'refresh');

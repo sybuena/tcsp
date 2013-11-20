@@ -17,7 +17,7 @@ class VerifyLogin extends MY_Controller {
 		
 		if($this->form_validation->run() == FALSE) {
 		 //Field validation failed.  User redirected to login page
-		 $this->load->view('admin/test');
+		 $this->load->view('admin/login');
 		} else {
 		 //Go to private area
 		 redirect('home', 'refresh');
