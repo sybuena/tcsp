@@ -13,11 +13,8 @@
             <a class="accordion-toggle collapsed " data-toggle="collapse" href="#MB8CPSHAKP">
                 <i class="icon-group icon-2x"></i>
                 <span>
-                    <?php if(count($newRegister) > 0) :?>
-                        <span class="label label-success" id="user-counter"> <?php echo count($newRegister); ?> </span> Users
-                    <?php else : ?>
-                        Users
-                    <?php endif; ?>
+                   <span class="label label-success" id="user-counter"> <?php echo count($newRegister); ?> </span> Users
+                    
                 <i class="icon-caret-down"></i>
                 </span>
             </a>                

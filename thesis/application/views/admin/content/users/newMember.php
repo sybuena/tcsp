@@ -2,7 +2,6 @@
     <div class="box-header">
         <span class="title">New Members</span>
         <ul class="box-toolbar">
-            <li><span class="label label-green"><?php echo count($newRegister); ?></span></li>
         </ul>
     </div>
     

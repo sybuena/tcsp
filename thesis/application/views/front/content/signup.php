@@ -71,15 +71,9 @@
           	<option value="director">Director</option>
           	<option value="secretary">Secretary</option>
           </select>
-<<<<<<< HEAD
-          <label><span class="error">*</span> Full Address (House # / Street Name / Barangay)</label>  
-          <input type="text" id="company-address" class="placeholder" placeholder="">
-          <label><span class="error">*</span> Company City / Province</label>
-=======
           <label><span class="error">*</span> Full Address (House # / Street Name/ Province)</label>  
           <input type="text" id="company-address" class="placeholder input-block-level" placeholder="">
           <label><span class="error">*</span> Company City</label>
->>>>>>> f1b733d59578f393b6eefe1db721ac6281151850
           <input type="text" id="company-city" class="input-block-level placeholder" placeholder="">
           <label><span class="error">*</span> Company Postal Code</label>
           <input type="text" id="company-postal-code" class="input-block-level placeholder" placeholder="" maxlength="4">

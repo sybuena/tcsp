@@ -23,18 +23,16 @@ class admin extends MY_Controller {
 		//load all
 		$this->load->model('user');
 		$this->load->library('session');	
+		
 		//prepare variables
 		$data['listOfUsers'] = $this->user->getAdminChat();
 		$data['message'] 	 = count($this->getMessage());
 		$data['messageRow']  = $this->getMessage();
 		$data['newRegister'] = $this->user->getNewRegister();
 		$data['declined'] 	 = $this->user->getDeclined();
-		$data['memberList'] 	 = json_decode(json_encode($this->user->getUser()), true);
-		
+		$data['memberList']  = json_decode(json_encode($this->user->getUser()), true);
 				
 		$this->load->adminTemplate('admin', $data);
-		
-		
 	}
 	
 	public function getMessage() {

@@ -106,4 +106,5 @@ font-size: 18px;font-weight: bold;}
 .form-fixed {width: 40%;
 float: left;
 margin-left: 50px;}
+.block {font-size:14px}
 </style>

@@ -2,7 +2,6 @@
 	<div class="box-header">
 		<span class="title">Declined Member</span>
 		<ul class="box-toolbar">
-			<li><span class="label label-green"><?php echo count($declined); ?></span></li>
 		</ul>
 	</div>
 	<div class="box-content">
