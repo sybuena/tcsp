@@ -53,6 +53,28 @@ class VerifyLogin extends MY_Controller {
 		exit;
 	}
 	
+	public function signup2() {
+		$this->checkField();
+		$query 		= $this->db->get_where('user', array('username' => $_POST['data']['username']));
+		$username 	= $query->result_array();
+	
+		if(!empty($username)) {
+			echo json_encode(array('result'=>0,'error'=>'username already taken'));
+			exit;
+		}
+		//make user as admin
+		$_POST['data']['usertype'] = 'admin';
+		$res = $this->db->insert('user', $_POST['data']);
+		
+		if($res) {
+		
+			echo json_encode(array('result'=>1));
+			exit;
+		}
+		echo json_encode(array('result'=>0));
+		exit;
+	}
+	
 	public function login() {
 			
 		$this->load->helper(array('form'));

@@ -11,6 +11,9 @@
     })();
 	
 $(document).ready(function() {
+	
+	var EMAIL_PATTERN = "[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?";
+
 	var interval = 5000;
 	var new_member = '<tr class="status-pending"><td class="icon"><i class="icon-exchange"></i></td>'+
            	'<td>[NAME]</td><td>[CITY]</td><td><div class="btn-group">'+
@@ -122,7 +125,7 @@ $(document).ready(function() {
 				type 		: 'POST',
 				data		: {'data':data,'subs':{}},	
 				dataType 	: 'json',
-				url 		: '/verifyLogin/signup/',
+				url 		: '/verifyLogin/signup2/',
 				success		: function(data2) {
 					if(data2.result == 0) {
 						$('#error-username').show();
