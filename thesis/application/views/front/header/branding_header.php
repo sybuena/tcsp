@@ -1,9 +1,9 @@
 <!--branding/logo-->
 <div class="span8">
     <a class="brand" href="/" title="Home">
-      <h1><span>TC</span>SP<span></span></h1>
+      <h1 style="font-size: 60px"><span>TC</span>SP<span></span></h1>
     </a>
-    <div class="slogan">
+    <div class="slogan" style="font-size:18.9px">
         <?php echo $this->lang->line('company_title');?><br>
         <small class="green"><?php echo $this->lang->line('subtitle');?></small>
     </div>
