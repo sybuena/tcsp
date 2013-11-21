@@ -9,7 +9,7 @@
         <!-- Dropdown Menu -->
         <ul class="dropdown-menu mega-menu" role="menu" aria-labelledby="features-drop">
             <li class="mega-menu-wrapper" role="menuitem">
-                <span class="menu-title">Mega Menu with links & text items</span>
+                <span class="menu-title">Other Features</span>
                 <ul class="row-fluid" role="menu">
                     <li class="span4" role="menuitem">
                         <a href=""></a>
@@ -23,7 +23,7 @@
                     </li>
                     <li class="span4" role="menuitem">
                         <a href=""></a>
-                        <a href="" tabindex="-1" class="menu-item">Other message</a>
+                        <a href="" tabindex="-1" class="menu-item">Other Pictures</a>
                         <span>Taiwanese Chamber of the South Philippines</span>
                     </li>
                 </ul>

@@ -26,16 +26,16 @@
           <input type="text" id="price-plan" placeholder="" value="Php 1500.00" disabled="disabled">
           <hr>
           <h5>Personal Information</h5>
-          <label><span class="error">*</span> First Name</label>  
+          <label><span class="error">*</span> Given Name</label>  
           <input type="text" id="firstname" class="input-block-level placeholder" placeholder="">
           <label><span class="error">*</span> Surname</label>  
           <input type="text" id="surname" class="input-block-level placeholder" placeholder="">
-          <label><span class="error">*</span> Full Address (House # / Street Name/ Province)</label>  
+          <label><span class="error">*</span> Full Address (House # / Street Name / Barangay)</label>  
           <input type="text" id="address" class="placeholder" placeholder="">
-          <label><span class="error">*</span> City</label>
+          <label><span class="error">*</span> City / Province</label>
           <input type="text" id="city" class="input-block-level placeholder" placeholder="">
           <label><span class="error">*</span> Postal Code</label>  
-          <input type="text" id="postal-code" class="input-block-level placeholder" placeholder="">
+          <input type="text" id="postal-code" class="input-block-level placeholder" placeholder="" maxlength="4">
           <label>Landline Number</label>
           <small class="help-inline error display-none"><i>Landline number length must be 8</i></small>    
           <input type="text" id="land-number" class="input-block-level placeholder" maxlength="8">
@@ -58,7 +58,7 @@
           <h5 class="help-inline display-none">Password Strength : <span></span></h5>
           <small class="help-inline error display-none"><i>Password mismatch</i></small>
           <input type="password" id="password"class="input-block-level placeholder" placeholder="">
-          <label><span class="error">*</span> Corfirm Password</label>  
+          <label><span class="error">*</span> Confirm Password</label>  
           <input type="password" id="password2"class="input-block-level placeholder" placeholder="">
           <hr>	
           <h5>Company Information</h5>
@@ -71,12 +71,12 @@
           	<option value="director">Director</option>
           	<option value="secretary">Secretary</option>
           </select>
-          <label><span class="error">*</span> Full Address (House # / Street Name/ Province)</label>  
+          <label><span class="error">*</span> Full Address (House # / Street Name / Barangay)</label>  
           <input type="text" id="company-address" class="placeholder" placeholder="">
-          <label><span class="error">*</span> Company City</label>
+          <label><span class="error">*</span> Company City / Province</label>
           <input type="text" id="company-city" class="input-block-level placeholder" placeholder="">
           <label><span class="error">*</span> Company Postal Code</label>
-          <input type="text" id="company-postal-code" class="input-block-level placeholder" placeholder="">
+          <input type="text" id="company-postal-code" class="input-block-level placeholder" placeholder="" maxlength="4">
           <label><span class="error">*</span> Company Landline Number</label>
           <small class="help-inline error display-none"><i>Landline number length must be 8</i></small>  
           <input type="text" id="company-land-number" class="input-block-level placeholder" maxlength="8">

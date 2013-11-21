@@ -1,9 +1,9 @@
 <li class="not-login">
-    <a href="#Signup" class="btn btn-primary signup page-toggle">Sign Up</a>
+    <a href="#Signup" class="btn btn-primary signup page-toggle"><?php echo $this->lang->line('sign_up')?></a>
 </li>
 <li class="dropdown not-login">
     <a href="#" class="btn btn-primary dropdown-toggle login" id="login-drop" data-toggle="dropdown">
-        Member Login
+        <?php echo $this->lang->line('login')?>
     </a>
     <div class="dropdown-menu" role="menu" aria-labelledby="login-drop">
         <form class="form-inline" id="login-form-drop" role="menuitem">                    

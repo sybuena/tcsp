@@ -8,13 +8,13 @@
           
           <!--Slide #1 with caption-->
           <div class="slide row-fluid">
-            <div class="span7"><a href=""><img src="/assets/images/e3.png" alt="Feature 1"></a>
+            <div class="span7"><a href=""><img src="/assets/images/b.jpg" alt="Feature 1" style="margin-left:10px; margin-bottom:10px; margin-top:10px; margin-right:10px;"></a>
             </div>
             <div class="span5 caption">
                 <h2><?php echo $this->lang->line('welcome');?></h2>
                 <h4><?php echo $this->lang->line('compan_title');?></h4>
                 <p><?php echo $this->lang->line('subtitle');?></p>
-                <a href="#" class="btn btn-large btn-primary page-toggle" id="4">Learn More+</a>
+                <a href="#" class="btn btn-large btn-primary page-toggle" id="4"><?php echo $this->lang->line('learn');?></a>
             </div>
           <?php /*if($admin):?>                
             <a target="_blank" href="<?php echo base_url().'app/edit/'.$slide_1[0]['ID']; ?>" class="btn btn-danger btn-mini pull-right"><i class="icon-edit"></i> Edit Slide</a>
@@ -28,7 +28,7 @@
             <a target="_blank" href="<?php echo base_url().'app/edit/'.$slide_2[0]['ID']; ?>" class="btn btn-danger btn-mini pull-right"><i class="icon-edit"></i> Edit Slide</a>
             <?php endif; ?>
 	<?php echo $slide_2[0]['data']; */?>         
-              <div class="span3"><a href=""><img src="/assets/images/CHAMBER.jpg" width="100"alt="Feature 1" style="margin-top:30px; margin-left:10px"></a></div>
+              <div class="span3"><a href=""><img src="/assets/images/CHAMBER.jpg" width="100"alt="Feature 1" style="margin-top:18px; margin-left:10px; margin-bottom:10px;"></a></div>
             <div class="span8 caption">
                 <h2><?php echo $this->lang->line('vision');?></h2>
                 <p style="text-align:justify"><?php echo $this->lang->line('vision_1');?></p>
@@ -47,7 +47,7 @@
 <div id="content">
   <div class="container">
      <div class="block features">
-          <h2 class="title-divider"><span>Latest <span class="de-em">Events</span></span> <small></small></h2>
+          <h2 class="title-divider"><span><?php echo $this->lang->line('latest');?> <span class="de-em"><?php echo $this->lang->line('events');?></span></span> <small></small></h2>
           <ul class="thumbnails">
             <li class="span3">
               <a href=""><img src="/assets/images/e1.png" alt="Feature 1"></a>
@@ -79,8 +79,8 @@
      
           
   	<div class="block testimonials margin-top-large">
-          <h2 class="title-divider"><span>Welcome <span class="de-em">Message</span></span> 
-          <small>Messages from Taiwanese Chamber of the South Philippines</small></h2>
+          <h2 class="title-divider"><span><?php echo $this->lang->line('welcome');?> <span class="de-em"><?php echo $this->lang->line('message');?></span></span> 
+          <small> <?php echo $this->lang->line('message_1')?></small></h2>
           <div class="row">
             <div class="span4">
               <blockquote>
@@ -108,13 +108,13 @@
   <div class="row-fluid">
     <!-- Plan features -->
     <div class="well well-mini pull-center">
-      <h4 class="inline-el pad-right"><span> Latest News<span class="de-em">Include</span>:</span></h4>
+      <h4 class="inline-el pad-right"><span><?php echo $this->lang->line('news')?> <span class="de-em"><?php echo $this->lang->line('news_1')?></span></h4>
       <p class="inline-el pad-left muted">Halloween Special on November <span class="spacer">//</span> The upcoming event on December <span class="spacer">//</span> New Year Celebration on January 2014<span class="spacer">//</span> Sports Fest in Manila</p>
     </div>
   </div>   
   
      <div class="block features">
-  <h2 class="title-divider"><span>TCSP <span class="de-em">Sponsors</span></span> </h2>
+  <h2 class="title-divider"><span><?php echo $this->lang->line('sponsors')?> <span class="de-em"><?php echo $this->lang->line('sponsors_1')?></span></span> </h2>
   <ul class="thumbnails block customers"> 
        
       <li class="span4 type-media" data-quicksand-id="id-0" data-quicksand-tid="type-media">

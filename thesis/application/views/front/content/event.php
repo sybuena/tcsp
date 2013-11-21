@@ -1,7 +1,7 @@
 <div id="content">
       <div class="container">
 	<div class="row-fluid">
-	    <h2 class="title-divider"><span>News & <span class="de-em">Event</span></span> <small>We love to talk!</small></h2>
+	    <h2 class="title-divider"><span>News & <span class="de-em">Event</span></span> <small>of Taiwanese Chamber of the South Philippines</small></h2>
 	</div>
 	
         <div class="row">

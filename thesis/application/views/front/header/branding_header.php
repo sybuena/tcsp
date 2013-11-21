@@ -11,7 +11,7 @@
 <!--header rightside-->
 <div class="span4">
     <div id="header-hidden-link">
-        <a href="#" class="show-hide" title="Click me you'll get a surprise" data-target=".header-hidden">
+        <a href="#" class="show-hide" title="Click me!" data-target=".header-hidden">
         <i></i>Open</a> 
     </div>
     <!--social media icons-->

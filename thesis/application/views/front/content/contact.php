@@ -17,7 +17,7 @@
           
           <!--main content-->
           <div class="span9">
-            <h2 class="title-divider"><span>Contact <span class="de-em">Us</span></span> <small>Ways To Get In Touch</small></h2>
+            <h2 class="title-divider"><span><?php echo $this->lang->line('contact_us');?></span> <small><?php echo $this->lang->line('in_touch');?></small></h2>
             
             <div class="row-fluid">
               <div class="span6">
