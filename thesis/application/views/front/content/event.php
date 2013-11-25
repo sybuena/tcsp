@@ -1,7 +1,7 @@
 <div id="content">
       <div class="container">
 	<div class="row-fluid">
-	    <h2 class="title-divider"><span>News & <span class="de-em">Event</span></span> <small>of Taiwanese Chamber of the South Philippines</small></h2>
+	    <h2 class="title-divider"><span><?php echo $this->lang->line('news_event');?></span> <small><?php echo $this->lang->line('of_taiwan');?></small></h2>
 	</div>
 	
         <div class="row">
@@ -25,7 +25,7 @@
 		<div class="span11">            
 		  <div class="media-body">
 		    <div class="tags"><a href="#" class="tag">culture</a> / <a href="#" class="type">feature</a></div>
-		    <h4 class="title media-heading"><a href="#">Commencement of the South Taiwan Association and a Farewell Ceremonies for Ambassador Chan, Hsien-Ching</a></h4>
+		    <h4 class="title media-heading"><a href="#"><?php echo $this->lang->line('event_1');?></a></h4>
 		    
 		    <!-- Meta details mobile -->
 		    <ul class="inline meta muted visible-phone">
@@ -35,9 +35,9 @@
 		    <a href="#" class="media-object">
 		      <img src="/assets/images/e1.png" alt="">
 		    </a>
-		    <p>Commencement of the South Taiwan Association and a Farewell Ceremonies for Ambassador Chan, Hsien-Ching</p>
+		    <p><?php echo $this->lang->line('event_1');?></p>
 		    <ul class="inline links">
-		      <li><a href="#" class="btn btn-mini"><i class="icon-circle-arrow-right"></i> Read more</a></li>
+		      <li><a href="#" class="btn btn-mini"><i class="icon-circle-arrow-right"></i> <?php echo $this->lang->line('read_more');?></a></li>
 		    </ul>
 		  </div>
 		</div>
@@ -63,7 +63,7 @@
 		<div class="span11">            
 		  <div class="media-body">
 		    <div class="tags"><a href="#" class="tag">culture</a> / <a href="#" class="type">feature</a></div>
-		    <h4 class="title media-heading"><a href="#">First Chinese New Year of the Taiwanese Chamber of the South Phils.</a></h4>
+		    <h4 class="title media-heading"><a href="#"><?php echo $this->lang->line('event_2');?></a></h4>
 		    
 		    <!-- Meta details mobile -->
 		    <ul class="inline meta muted visible-phone">
@@ -73,10 +73,9 @@
 		    <a href="#" class="media-object">
 		      <img src="/assets/images/e2.png" alt="">
 		    </a>
-		    <p>On Manila Southwoods with the former Pres. Fedil V. Ramos
-</p>
+		    <p><?php echo $this->lang->line('on_manila');?></p>
 		    <ul class="inline links">
-		      <li><a href="#" class="btn btn-mini"><i class="icon-circle-arrow-right"></i> Read more</a></li>
+		      <li><a href="#" class="btn btn-mini"><i class="icon-circle-arrow-right"></i> <?php echo $this->lang->line('read_more');?></a></li>
 		    </ul>
 		  </div>
 		</div>
@@ -101,7 +100,7 @@
 		<div class="span11">            
 		  <div class="media-body">
 		    <div class="tags"><a href="#" class="tag">culture</a> / <a href="#" class="type">feature</a></div>
-		    <h4 class="title media-heading"><a href="#">First Chinese New Year of the Taiwanese Chamber of the South Phils.</a></h4>
+		    <h4 class="title media-heading"><a href="#"><?php echo $this->lang->line('event_3');?></a></h4>
 		    
 		    <!-- Meta details mobile -->
 		    <ul class="inline meta muted visible-phone">
@@ -111,10 +110,9 @@
 		    <a href="#" class="media-object">
 		      <img src="/assets/images/e2.png" alt="">
 		    </a>
-		    <p>On Manila Southwoods with the former Pres. Fedil V. Ramos
-</p>
+		    <p><?php echo $this->lang->line('on_manila');?></p>
 		    <ul class="inline links">
-		      <li><a href="#" class="btn btn-mini"><i class="icon-circle-arrow-right"></i> Read more</a></li>
+		      <li><a href="#" class="btn btn-mini"><i class="icon-circle-arrow-right"></i> <?php echo $this->lang->line('read_more');?></a></li>
 		    </ul>
 		  </div>
 		</div>

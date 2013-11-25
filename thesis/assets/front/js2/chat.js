@@ -249,7 +249,8 @@ function chatHeartbeat(){
 				chatHeartbeatTime = maxChatHeartbeat;
 			}
 		}
-		setTimeout('chatHeartbeat();',chatHeartbeatTime);
+		//this is where we set the counting for chat..
+		setTimeout('chatHeartbeat();',5000);
 	}});
 }
 

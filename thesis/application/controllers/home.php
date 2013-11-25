@@ -5,7 +5,12 @@ class Home extends MY_Controller {
 	
     public $outputData;		//Holds the output data for each view
 	public $loggedInUser;
-
+	
+	public function bark() {
+		
+		echo 'bawawwaw';
+	}
+	
 	public function index(){
 	
 		//$this->lang->lang();
@@ -47,7 +52,7 @@ class Home extends MY_Controller {
 		
 		//load lang here
 		$this->outputData['lang'] = 'english';
-		
+	
 		if($this->input->get('language')) {
 			$this->outputData['lang'] = $this->input->get('language');
 			//still questioning if it is really needed to put it in session

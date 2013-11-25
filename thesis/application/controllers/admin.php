@@ -50,6 +50,12 @@ class admin extends MY_Controller {
 		return true;
 	}
 	
+	public function getByLocation() {
+		$res = $this->user->getUser();
+		echo '<pre>';
+		print_r($res);
+	}
+
 	public function newMessage() {
 		$res = $this->getMessage();
 		

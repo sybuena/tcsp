@@ -1,14 +1,14 @@
 <div id="inquire-modal" class="modal hide fade" tabindex="-1" role="dialog" aria-hidden="true">
 	<div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-        <h3 id="myModalLabel">Inquire now</h3>
+        <h3 id="myModalLabel"><?php echo $this->lang->line('inquire');?></h3>
     </div>
     
     <div class="modal-body">
     	
         <div class="alert alert-success" id="success-message" style="display:none">
             <i class="icon-info icon-3x pull-left"></i> 
-            <h4>Horay!</h4>
+            <h4>Hooray!</h4>
             <span class="small-font">
                 Your message has been send
             </span>
@@ -32,19 +32,19 @@
         
         <div class="form-horizontal">
           <div class="control-group">
-            <label class="control-label" for="inputEmail">Email Address :</label>
+            <label class="control-label" for="inputEmail"><?php echo $this->lang->line('email');?> :</label>
             <div class="controls">
           		<input type="text" class="span5" id="message_email">
             </div>
           </div>
           <div class="control-group">
-            <label class="control-label" for="inputEmail">Subject : </label>
+            <label class="control-label" for="inputEmail"><?php echo $this->lang->line('subject');?> : </label>
             <div class="controls">
           		<input type="text" class="span5" id="message_subject">
             </div>
           </div>
           <div class="control-group">
-            <label class="control-label" for="inputEmail">Message : </label>
+            <label class="control-label" for="inputEmail"><?php echo $this->lang->line('message');?> : </label>
             <div class="controls">
           <textarea class="span5" style="height: 100px;" id="message_content"></textarea>
             </div>
@@ -53,7 +53,7 @@
     	
     </div>
     <div class="modal-footer">
-          <button type="submit" class="btn btn-primary btn-large" id="send_message">Send message</button>
+          <button type="submit" class="btn btn-primary btn-large" id="send_message"><?php echo $this->lang->line('send');?></button>
     </div>
 </div>    
     

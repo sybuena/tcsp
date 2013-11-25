@@ -20,8 +20,15 @@ $(document).ready(function() {
 		}
 		
 		if(hash != '') {
-			$('.content-toggle').hide();
-			$(hash).show();
+			
+			//exception for temrs modal
+			if(hash == '#Terms') {
+				//load modal
+				$('#terms-modal').modal('show');	
+			} else {
+				$('.content-toggle').hide();
+				$(hash).show();
+			}
 		} else {
 			$('.content-toggle').hide();
 			$('#dashboard').show();
@@ -40,8 +47,14 @@ $(document).ready(function() {
 		}
 		
 		if(hash != '') {
-			$('.content-toggle').hide();
-			$(hash).show();
+			//exception for temrs modal
+			if(hash == '#Terms') {
+				//load modal
+				$('#terms-modal').modal('show');	
+			} else {
+				$('.content-toggle').hide();
+				$(hash).show();
+			}
 		}
 		
 	});

@@ -67,7 +67,7 @@
             				<input type="text"  id="email">
           				</div>
 						
-						<label>Firstname</label>
+						<label>Given Name</label>
         				<div class="input-prepend">
                             <span class="add-on" href="#"><i class="icon-user"></i></span>
             				<input type="text" id="firstname">

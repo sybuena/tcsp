@@ -17,10 +17,10 @@
           
           <!--main content-->
           <div class="span9">
-            <h2 class="title-divider"><span>About <span class="de-em">Us</span></span> <small>What &amp; who makes us tick!</small></h2>
+            <h2 class="title-divider"><span>About <span class="de-em">Us</span></span> <small>What &amp; who makes us stick!</small></h2>
             
             <!-- About company -->
-            <h4><?php echo $this->lang->line('began');?><small></h4>
+            <h4><?php echo $this->lang->line('began');?></h4>
             <p><?php echo $this->lang->line('about_1');?></p>
             <p><?php echo $this->lang->line('about_2');?>
             
@@ -30,10 +30,7 @@
             <p><?php echo $this->lang->line('vision_1');?>
 </p>
           
-            
-            
-            
-            
+             
             </div>
           </div>
           

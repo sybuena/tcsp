@@ -69,8 +69,8 @@ $(document).ready(function() {
 	 */
 	window.setInterval(function(){
 	  	/// call your function here
-		checkNewRegister()
-		checkNewMessage();
+		///checkNewRegister()
+		//checkNewMessage();
 		
 	}, interval);
 	

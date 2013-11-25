@@ -79,7 +79,7 @@
                 </li>
                 <hr>
 				<li class="input">
-                	<label><h5>Firstname :</h5></label>
+                	<label><h5>Given Name :</h5></label>
                   <input type="text" class="validate[required]" placeholder="Email" name="firstname" value="<?php echo $row['firstname']; ?>"/>
                 </li>
                 

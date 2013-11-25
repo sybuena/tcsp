@@ -24,9 +24,13 @@
                       <i class="icon-user"></i> Members
                     </a>
                 </li>
-                
                 <li class="">
-                    <a href="#contacts">
+                    <a href="#stats">
+                      <i class="icon-th-large"></i> Statistics
+                    </a>
+                </li>
+                <li class="">
+                    <a href="#">
                       <i class="icon-user"></i> Contacts
                     </a>
                 </li>

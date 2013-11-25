@@ -15,7 +15,13 @@
           
         <!-- Contact us section -->
         <div class="span4">  
-            <?php echo $header_2[0]['data']; ?>
+            <!--@todo: replace with company contact details-->
+            <h3><?php echo $this->lang->line('contact_us');?></h3>
+            <address>
+              <p><abbr title="Phone"><i class="icon-phone"></i></abbr> +63 046 4303475</p>
+              <p><abbr title="Email"><i class="icon-envelope"></i></abbr> tcsp.assoc@gmail.com</p>
+              <p><abbr title="Address"><i class="icon-home"></i></abbr> <?php echo $this->lang->line('address');?></p>
+            </address>
         </div>
         <!-- If there is a login user -->
         <?php if(!empty($login)) :?>
@@ -33,7 +39,7 @@
                         <?php foreach($listOfUsers as $res) : ?>
                             <tr>
                                 <td>
-                                    <?php if($res['online']==1) echo 'Active'; else echo 'Inactive'; ?>
+                                    <?php if($res['online']==1) echo 'Active'; else echo ('Inactive'); ?>
                                 </td>
                                 <td>
                                     <?php if($_SESSION['username']==$res['username']) : ?>

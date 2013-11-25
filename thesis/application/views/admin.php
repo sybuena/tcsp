@@ -32,6 +32,10 @@
     <div id="message" class="content-toggle">
 		<?php include('admin/content/message.php');?>
 	</div>
+
+    <div id="stats" class="content-toggle">
+		<?php include('admin/content/stats.php');?>
+	</div>
     <div id="users" class="content-toggle">
 		<?php include('admin/content/users.php');?>
 	</div>

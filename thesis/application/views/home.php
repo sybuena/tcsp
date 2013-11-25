@@ -56,10 +56,16 @@
 <div id="Privacy" class="content-toggle" style="display:none">
 	<?php include('front/content/privacy.php');?>
 </div>
+
 <div id="News" class="content-toggle" style="display:none">
-	<?php include('front/content/event.php');?>
+	<?php if(!empty($login)) : ?>
+		<?php include('front/content/event.php');?>
+	<?php else :?>	
+		<?php include('front/content/no_login.php');?>
+	<?php endif; ?>
 </div>
 
 <!-- Load all modal here -->
 
 	<?php include('front/modal/inquire.php');?>
+	<?php include('front/modal/terms.php');?>

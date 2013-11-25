@@ -32,8 +32,7 @@
               <div class="span6">             
                 <p><abbr title="Phone"><i class="icon-phone"></i></abbr> +63 046 4303475</p>
                 <p><abbr title="Email"><i class="icon-envelope"></i></abbr> tcsp.assoc@gmail.com</p>
-                <p><abbr title="Address"><i class="icon-home"></i></abbr> No. 13 5th Street Golden Mile
-                  Business Park, Carmona, Cavite.</p>
+                <p><abbr title="Address"><i class="icon-home"></i></abbr><?php echo $this->lang->line('address');?></p>
                 <p><a href="https://maps.google.co.uk/maps?hl=en&authuser=0&q=Golden+Mile+Business+Park,+Carmona,+Cavite&ie=UTF-8&ei=jExaUoysOaLsiAf1lICYDQ&ved=0CAoQ_AUoAg" target="_blank">
                   <img src="/assets/images/map.png" alt="Location map" class="img-polaroid">
                 </a></p>                
