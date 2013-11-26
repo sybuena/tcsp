@@ -24,11 +24,11 @@
                       <i class="icon-user"></i> Members
                     </a>
                 </li>
-                <li class="">
+                <!--<li class="">
                     <a href="#stats">
                       <i class="icon-th-large"></i> Statistics
                     </a>
-                </li>
+                </li>-->
                 <li class="">
                     <a href="#">
                       <i class="icon-user"></i> Contacts

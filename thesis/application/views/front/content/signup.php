@@ -36,6 +36,12 @@
           <input type="text" id="city" class="input-block-level placeholder" placeholder="">
           <label><span class="error">*</span> <?php echo $this->lang->line('postal');?></label>  
           <input type="text" id="postal-code" class="input-block-level placeholder" placeholder="" maxlength="4">
+          <label><span class="error">*</span> Nationality</label>
+          	<select class="input-block-level">
+            	<?php foreach($countryList as $k => $v) : ?>
+                	<option vale="<?php echo $k; ?>"><?php echo $v; ?></option>
+                <?php endforeach; ?>
+            </select>
           <label><?php echo $this->lang->line('landline');?></label>
           <small class="help-inline error display-none"><i>Landline number length must be 8</i></small>    
           <input type="text" id="land-number" class="input-block-level placeholder" maxlength="8">

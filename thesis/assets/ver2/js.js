@@ -59,6 +59,7 @@ $(document).ready(function() {
 		
 	});
 	
+	$('.customers').animate({'right': '300px'},'slow')
 	/**
 	 * On input enter modify behavior
 	 * 

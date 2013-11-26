@@ -49,7 +49,7 @@ class Home extends MY_Controller {
 		$this->outputData['block_1'] = $this->getBlocks('block_1');
 		$this->outputData['block_2'] = $this->getBlocks('block_2');
 		$this->outputData['block_3'] = $this->getBlocks('block_3');
-		
+		$this->outputData['countryList'] = $this->_countryList();
 		//load lang here
 		$this->outputData['lang'] = 'english';
 	
@@ -86,6 +86,60 @@ class Home extends MY_Controller {
 		
 		redirect('/', 'refresh');
  	}
+	
+	public function notification($type = 'approved') {
+		if($type == 'approved') {
+			$html = '<p>
+Hi {registrant.firstname},
+</p>
+
+<p>
+Thank you for your recent application for Taiwanese Chamber of the South Philippines. <br />
+After careful review of your application, we decided to accept your application. From now you can use your account to sign in to our website together with all the information you provided</p>
+
+<p>Taiwanese Chamber of the South Philippines<br />
++63 046 4303475<br />
+tcsp.assoc@gmail.com<br />
+No. 13 5th Street Golden Mile Business Park, Carmona, Cavite.<br />
+
+</p>
+<p>Regards,<br>
+Administrator
+</p>
+
+<small><hr>
+Email sent via tcsp in response to an online registration.
+</small>';
+		} else {
+		$html = '<p>
+Hi {registrant.firstname},
+</p>
+
+<p>
+Thank you for your recent application for Taiwanese Chamber of the South Philippines. <br />
+Unfortunately, after careful review of your application, we must decline your application request at this time
+</p>
+<p>
+
+If you feel that you have information that will make a difference, please contact us at:
+</p>
+
+<p>Taiwanese Chamber of the South Philippines<br />
++63 046 4303475<br />
+tcsp.assoc@gmail.com<br />
+No. 13 5th Street Golden Mile Business Park, Carmona, Cavite.<br />
+
+</p>
+<p>Regards,<br>
+Administrator
+</p>
+
+<small><hr>
+Email sent via tcsp in response to an online registration.
+</small>';
+		}
+		echo $html;
+	}
 	
 }
 

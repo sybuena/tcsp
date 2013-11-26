@@ -31,6 +31,8 @@ class admin extends MY_Controller {
 		$data['newRegister'] = $this->user->getNewRegister();
 		$data['declined'] 	 = $this->user->getDeclined();
 		$data['memberList']  = json_decode(json_encode($this->user->getUser()), true);
+		$data['location'] 	 = $this->getByLocation($data['memberList']);
+		$data['date'] 	 = $this->getByDate($data['memberList']);
 				
 		$this->load->adminTemplate('admin', $data);
 	}
@@ -50,12 +52,49 @@ class admin extends MY_Controller {
 		return true;
 	}
 	
-	public function getByLocation() {
-		$res = $this->user->getUser();
-		echo '<pre>';
-		print_r($res);
+	public function getByLocation($user = array()) {
+		if(!empty($user)) {
+			$res = $user;
+		} else {
+			$res = json_decode(json_encode($this->user->getUser()), true);
+		}
+		$city = array();
+		foreach($res as $v) {
+			if(isset($v['city'])) {
+				$city[] = $v['city'];
+			}
+		}
+		
+		$location = array_count_values($city);
+		//foreach($location as $k => $v) {
+			//echo $k.' = '.$v.'<pre>';
+		//}
+		//echo '<pre>'; print_r($location);
+		return $location;
 	}
-
+	
+	public function getByDate($user = array()) {
+		if(!empty($user)) {
+			$res = $user;
+		} else {
+			$res = json_decode(json_encode($this->user->getUser()), true);
+		}
+		
+		$raw = array();
+		foreach($res as $v) {
+			if(isset($v['created'])) {
+				$raw[] = date('F',strtotime($v['created']));
+			}
+		}
+		
+		$date = array_count_values($raw);
+		//foreach($location as $k => $v) {
+			//echo $k.' = '.$v.'<pre>';
+		//}
+		//echo '<pre>'; print_r($location);
+		return $date;
+	}
+	
 	public function newMessage() {
 		$res = $this->getMessage();
 		

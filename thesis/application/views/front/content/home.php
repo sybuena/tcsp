@@ -28,7 +28,7 @@
             <a target="_blank" href="<?php echo base_url().'app/edit/'.$slide_2[0]['ID']; ?>" class="btn btn-danger btn-mini pull-right"><i class="icon-edit"></i> Edit Slide</a>
             <?php endif; ?>
 	<?php echo $slide_2[0]['data']; */?>         
-              <div class="span3"><a href=""><img src="/assets/images/CHAMBER.jpg" width="100"alt="Feature 1" style="margin-top:18px; margin-left:10px; margin-bottom:10px;"></a></div>
+              <div class="span3"><a href=""><img src="/assets/images/CHAMBER.png" width="100"alt="Feature 1" style="margin-top:18px; margin-left:10px; margin-bottom:10px;"></a></div>
             <div class="span8 caption">
                 <h2><?php echo $this->lang->line('vision');?></h2>
                 <p style="text-align:justify; font-size: 16px;"><?php echo $this->lang->line('vision_1');?></p>
@@ -210,6 +210,8 @@
         </div>            
       </div>
     </div>-->
+    
+    
     
   </div>
 </div>

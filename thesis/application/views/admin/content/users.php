@@ -6,24 +6,6 @@
           		<h3 class="title"><i class="icon-table"></i>Member List</h3>
           		<h5>View, Edit or remove all your registered members</h5>
         	</div>
-          <ul class="inline pull-right sparkline-box">
-
-          <li class="sparkline-row">
-            <h4 class="blue"><span>Total Member</span> <?php echo count($memberList); ?></h4>
-            <div class="sparkline big" data-color="blue"><!--26,16,20,29,18,3,12,21,24,20,4,23--></div>
-          </li>
-
-          <li class="sparkline-row">
-            <h4 class="green"><span>New Member</span> <?php echo count($newRegister); ?></h4>
-            <div class="sparkline big" data-color="green"><!--9,20,5,21,28,14,17,25,12,22,9,3--></div>
-          </li>
-
-          <li class="sparkline-row">
-            <h4 class="red"><span>Declined Member</span> <?php echo count($declined); ?></h4>
-            <div class="sparkline big"><!--15,28,4,7,18,12,20,7,25,19,13,29--></div>
-          </li>
-
-        </ul>
       </div>
     </div>
 </div>
