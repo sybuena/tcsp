@@ -61,7 +61,7 @@ class admin extends MY_Controller {
 		$city = array();
 		foreach($res as $v) {
 			if(isset($v['city'])) {
-				$city[] = $v['city'];
+				$city[] = strtolower($v['city']);
 			}
 		}
 		
