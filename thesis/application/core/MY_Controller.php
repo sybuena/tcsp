@@ -3,13 +3,43 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class MY_Controller extends CI_Controller {
 	
+	protected $_config = array(
+		'protocol' 		=> 'smtp',
+		'smtp_host' 	=> 'smtp.gmail.com',
+		'smtp_port' 	=> 25,
+		'smtp_timeout'	=> '25',
+		'crlf'				=> '\r\n',
+		'newline'				=> '\r\n',
+		//'smtp_crypto' 	=> 'ssl',
+		'smtp_user' 	=> '',
+		'smtp_pass' 	=> '',
+		'mailtype'  	=> 'html', 
+		'charset'   	=> 'iso-8859-1'
+	);
+	
 	public function __construct() {
 		
 		parent::__construct();
 		
 		//SET ALL LOADER HERE
 		$this->load->helper('url');
+		$this->load->library('email');
 		$this->load->model('user','',TRUE);
+		/*
+		$this->email->initialize($this->_config);
+		
+		// $this->email->initialize($config);
+
+        $this->email->from('sybuena2@gmail.com', 'myname');
+        $this->email->to('sybuena@gmail.com'); 
+
+        $this->email->subject('Email Test');
+        $this->email->message('Testing the email class.');  
+
+        $this->email->send();
+
+        echo $this->email->print_debugger();
+exit;*/
 	}
 	
 	public function checkField() {

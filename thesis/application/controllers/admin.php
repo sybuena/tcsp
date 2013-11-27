@@ -66,10 +66,7 @@ class admin extends MY_Controller {
 		}
 		
 		$location = array_count_values($city);
-		//foreach($location as $k => $v) {
-			//echo $k.' = '.$v.'<pre>';
-		//}
-		//echo '<pre>'; print_r($location);
+		
 		return $location;
 	}
 	
@@ -88,10 +85,7 @@ class admin extends MY_Controller {
 		}
 		
 		$date = array_count_values($raw);
-		//foreach($location as $k => $v) {
-			//echo $k.' = '.$v.'<pre>';
-		//}
-		//echo '<pre>'; print_r($location);
+		
 		return $date;
 	}
 	
