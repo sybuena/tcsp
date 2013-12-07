@@ -23,6 +23,7 @@
               <p><abbr title="Address"><i class="icon-home"></i></abbr> <?php echo $this->lang->line('address');?></p>
             </address>
         </div>
+        
         <!-- If there is a login user -->
         <?php if(!empty($login) && $login['is_ok']) :?>
             <div class="span4">

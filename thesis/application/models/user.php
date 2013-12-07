@@ -56,6 +56,7 @@ Class User extends CI_Model {
 		$this->db->select('id, username, firstname, surname, created, email, city, online');
 	   	$this->db->from('user');
 	   	$this->db->where('usertype', 'admin');
+	   	$this->db->or_where('usertype', 'super-admin');
 		
 		$query = $this->db->get();
 		return $query->result_array();
