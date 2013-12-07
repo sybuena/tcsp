@@ -163,10 +163,13 @@ class admin extends MY_Controller {
 		//send notification
 		$this->_sendNotification($id, 'decline');
 		
-		$this->db->where('payment_user', $id);
-		$this->db->update('payment', array('is_ok'=>3));
+		$this->db->where('id', $id);
+		$this->db->update('user', array('enable'=>0));
 		
-   		redirect('admin#users', 'refresh');
+		$this->db->where('payment_user', $id);
+		$this->db->update('payment', array('is_ok'=>0));
+		
+   		redirect('admin#archive', 'refresh');
 	}
 	
 	public function logout() {

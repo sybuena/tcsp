@@ -51,7 +51,7 @@
 	
 	?>
     
-	<!--<script type="text/javascript" src="/assets/gchart/jsapi.js"></script>
+	<script type="text/javascript" src="/assets/gchart/jsapi.js"></script>
     <script type="text/javascript">
       google.load("visualization", "1", {packages:["corechart"]});
       google.setOnLoadCallback(drawChart);

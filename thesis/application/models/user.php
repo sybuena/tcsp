@@ -105,6 +105,7 @@ Class User extends CI_Model {
 	   	$this->db->from('user');
 		$this->db->join('payment', 'id=payment_user', 'left');
 	   	$this->db->where('usertype !=', 'admin');
+		$this->db->where('enable', '0');
 	   	$this->db->where('is_ok', '0');
 		
 		$query = $this->db->get();
