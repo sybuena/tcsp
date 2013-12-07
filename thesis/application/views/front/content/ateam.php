@@ -17,7 +17,7 @@
           
           <!--main content-->
           <div class="span9">
-            <h2 class="title-divider"><span><?php echo $this->lang->line('the_team');?></span> <small><?php echo $this->lang->line('the_team1');?></h2>
+            <h2 class="title-divider"><span><?php echo $this->lang->line('the_team');?></span> <small><?php echo $this->lang->line('the_team1');?></small></h2>
             
             <!-- The team -->
             <div class="block team margin-top-large" id="team">

@@ -29,6 +29,8 @@ class VerifyLogin extends MY_Controller {
 		$this->checkField();
 		$query 		= $this->db->get_where('user', array('username' => $_POST['data']['username']));
 		$username 	= $query->result_array();
+		//convert password to md5
+		$_POST['data']['password'] = md5($_POST['data']['password']);
 		
 		if(!empty($username)) {
 			echo json_encode(array('result'=>0,'error'=>'username already taken'));
@@ -41,8 +43,6 @@ class VerifyLogin extends MY_Controller {
 			$id = $this->db->insert_id();	
 			
 			$_POST['subs']['payment_user'] 		= $id;
-			$_POST['subs']['payment_created'] 	= date('Y-m-d');
-			$_POST['subs']['payment_due'] 		= date('Y-m-d', strtotime('+1 year'));
 			
 			$plan = $this->db->insert('payment', $_POST['subs']);
 			
@@ -81,9 +81,9 @@ class VerifyLogin extends MY_Controller {
    		$this->load->adminTemplate('admin/login');
 	}
 	
-	function frontLogin($user, $pass) {
-		
-   		$result = $this->user->frontLogin($user, $pass);
+	function frontLogin() {
+		$this->checkField();
+   		$result = $this->user->frontLogin($_POST['username'], $_POST['password']);
 		
 		//if failed
 		if(!$result) {
@@ -105,18 +105,11 @@ class VerifyLogin extends MY_Controller {
 		
 		//query the database
 		$result = $this->user->login($username, $password);
-		
+		echo '<pre>';print_r($result); exit;
 		if($result) {
-			$sess_array = array();
-		 	foreach($result as $row) {
-			   $sess_array = array(
-				 'id' 		=> $row['id'],
-         			'username' 	=> $row['username'],
-         			'firstname' => $row['firstname'],
-         			'surname' 	=> $row['surname']
-			   );
-		   		$this->session->set_userdata('logged_in', $sess_array);
-		 	}
+			
+			$this->session->set_userdata('logged_in', $result);
+		 	
 			
 		 	return TRUE;
 		} else {

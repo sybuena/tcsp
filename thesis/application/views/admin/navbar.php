@@ -1,7 +1,7 @@
 <div class="primary-sidebar">
     <!-- Main nav -->
     <ul class="nav nav-collapse collapse nav-collapse-primary">
-        <li class="active">
+        <li class="">
             <span class="glow"></span>
             <a href="#dashboard">
                 <i class="icon-dashboard icon-2x"></i>
@@ -13,25 +13,41 @@
             <a class="accordion-toggle collapsed " data-toggle="collapse" href="#MB8CPSHAKP">
                 <i class="icon-group icon-2x"></i>
                 <span>
-                   <span class="label label-success" id="user-counter"> <?php echo count($newRegister); ?> </span> Users
+                  Users
                     
                 <i class="icon-caret-down"></i>
                 </span>
             </a>                
             <ul id="MB8CPSHAKP" class="collapse ">
                 <li class="">
-                    <a href="#users">
-                      <i class="icon-user"></i> Members
+                    <a href="#newMember">
+                      <i class="icon-user"></i> 
+                      <span class="label label-info" id="user-counter"> <?php echo count($newRegister); ?> </span>
+                      New Registered
                     </a>
                 </li>
-                <!--<li class="">
-                    <a href="#stats">
-                      <i class="icon-th-large"></i> Statistics
-                    </a>
-                </li>-->
                 <li class="">
-                    <a href="#">
-                      <i class="icon-user"></i> Contacts
+                    <a href="#users">
+                      <i class="icon-share-sign"></i> 
+                      <span class="label label-warning" id="user-counter"> <?php echo count($trial); ?> </span>
+                      
+                      In Proccess
+                    </a>
+                </li>
+                <li class="">
+                    <a href="#approve">
+                      <i class="icon-ok-sign"></i> 
+                      <span class="label label-success" id="user-counter"> <?php echo count($memberList); ?> </span>
+                      
+                      Members
+                    </a>
+                </li>
+                <li class="">
+                    <a href="#archive">
+                      <i class="icon-archive"></i> 
+                      <span class="label label-error" id="user-counter"> <?php echo count($declined); ?> </span>
+                      
+                      Archive
                     </a>
                 </li>
             </ul>
@@ -45,6 +61,15 @@
               <?php else : ?>
                 <span>Messages</span>
               <?php endif; ?>
+          </a>
+        </li>
+        
+        <li class="">
+          <span class="glow"></span>
+          <a href="#admin">
+              <i class="icon-key"></i>    
+              <span>Administrator</span>
+              
           </a>
         </li>
     </ul>

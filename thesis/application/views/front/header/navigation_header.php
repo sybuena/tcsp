@@ -33,6 +33,11 @@
     <li id="2" class="page-toggle">
         <a href="#News" class="menu-item"><?php echo $this->lang->line('news');?></a>
     </li>
+    <?php if(!empty($login)) : ?>    	
+        <li id="2" class="page-toggle">
+            <a href="#Profile" class="menu-item">Profile</a>
+        </li>
+	<?php endif; ?>
     <li class="dropdown">
         <a href="" class="dropdown-toggle" id="about-drop" data-toggle="dropdown"><?php echo $this->lang->line('about');?> +</a> 
         <!-- Dropdown Menu -->

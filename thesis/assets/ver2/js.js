@@ -25,7 +25,7 @@ $(document).ready(function() {
 			if(hash == '#Terms') {
 				//load modal
 				$('#terms-modal').modal('show');	
-			} else {
+			} else { 
 				$('.content-toggle').hide();
 				$(hash).show();
 			}
@@ -139,9 +139,10 @@ $(document).ready(function() {
 		} else {
 			
 			$.ajax({
-				type 		: 'GET',
+				type 		: 'POST',
 				dataType 	: 'json',
-				url 		: '/verifyLogin/frontLogin/'+username+'/'+password,
+				data		: {'password':password,'username':username},
+				url 		: '/verifyLogin/frontLogin/',
 				success		: function(data2) {
 					console.log(data2);
 					if(data2.result == 0){

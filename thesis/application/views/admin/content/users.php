@@ -3,8 +3,8 @@
 	<div class="row-fluid">
 		<div class="area-top clearfix">
         	<div class="pull-left header">
-          		<h3 class="title"><i class="icon-table"></i>Member List</h3>
-          		<h5>View, Edit or remove all your registered members</h5>
+          		<h3 class="title"><i class="icon-share-sign"></i>In Proccess Members</h3>
+          		<h5>Proccess all new member</h5>
         	</div>
       </div>
     </div>
@@ -19,11 +19,11 @@
           		<span class="breadcrumb-arrow"><span></span></span>
         	</div>
 			<div class="breadcrumb-button">
-          		<span class="breadcrumb-label"><i class="icon-group"></i> Users</span>
+          		<span class="breadcrumb-label"><i class="icon-group"></i> Members</span>
           		<span class="breadcrumb-arrow"><span></span></span>
         	</div>
 			<div class="breadcrumb-button">
-          		<span class="breadcrumb-label"><i class="icon-table"></i> Member</span>
+          		<span class="breadcrumb-label"><i class="icon-share-sign"></i> In Process</span>
           		<span class="breadcrumb-arrow"><span></span></span>
         	</div>
       	</div>
@@ -32,17 +32,7 @@
 
 <!-- 3. Main Content Section-->
 <div class="container-fluid padded">
-	<div class="row-fluid">
-    	<!-- New Member Section-->
-  		<div class="span6">
-			<?php include('users/newMember.php');?>
-  		</div>
-		<!-- declined Member Section -->
-  		<div class="span6">
-			<?php include('users/declinedMember.php');?>
-      	</div>
-	</div>
-    
+	
 	<div class="row-fluid">
   		<div class="span12">
 			<?php include('users/member.php');?>

@@ -46,7 +46,7 @@
   
 <div id="content">
   <div class="container">
-     <?php if(!empty($login)) : ?>
+     <?php if(!empty($login) && $login['is_ok']) : ?>
      <div class="block features">
           <h2 class="title-divider"><span><?php echo $this->lang->line('latest');?> <span class="de-em"><?php echo $this->lang->line('events');?></span></span> <small></small></h2>
           <ul class="thumbnails">

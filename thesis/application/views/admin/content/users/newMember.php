@@ -1,44 +1,46 @@
+
 <div class="box">
-    <div class="box-header">
-        <span class="title">New Members</span>
-        <ul class="box-toolbar">
-        </ul>
-    </div>
+	<div class="box-header"><span class="title">New Register</span></div>
+    	<div class="box-content">
+			<div id="dataTables">
+				<table cellpadding="0" cellspacing="0" border="0" class="dTable responsive">
+                    <thead>
+                        <tr>
+                          <th><div>Action</div></th>
+                          <th><div>Name</div></th>
+                          <th><div>Email</div></th>
+                          <th><div>Location</div></th>
+                          <th><div>Company</div></th>
+                          <th><div>Position</div></th>
+                        </tr>
+                        </thead>
+                    	<tbody>
+							<?php foreach((array)$newRegister as $key => $value): ?>
+                                <tr>
+                                  <td class="center">
+                                                                        
+                                    <div class="btn-group">
+                                        <button class="btn btn-mini btn-default dropdown-toggle" data-toggle="dropdown">
+                                            <i class="icon-cog"></i>
+                                        </button>
+                                        <ul class="dropdown-menu">
+                                          <li><a href="<?php echo '/admin/accept/'.$value['id'];?>">Mark as In Progress</a></li>
+                                          <li><a href="<?php echo '/admin/declined/'.$value['id'];?>">Decline User</a></li>
+                                        </ul>
+                                      </div>
+                                  </td>
+                                  <td><?php echo $value['surname'].', '.$value['firstname']; ?></td>
+                                  <td><?php echo $value['email']; ?></td>
+                                  <td><?php echo $value['city']?></td>
+                                  <td><?php echo $value['company-name']?></td>
+                                  <td><?php echo $value['position']?></td>
+                                  
+                                  
+                                </tr>
+                            <?php endforeach; ?>
+						</tbody>
+					</table>
+				</div>
+      		</div>
+    	</div>  
     
-    <div class="box-content">
-    <table class="table table-normal" id="new-member">
-        <thead>
-          <tr>
-            <td></td>
-            <td>Name</td>
-            <td>Location</td>
-            <td style="width: 40px"></td>
-          </tr>
-        </thead>
-        <tbody>
-        <?php if(count($newRegister) > 0):?>
-            <?php foreach($newRegister as $v) :?>
-            <tr class="status-pending">
-            <td class="icon"><i class="icon-exchange"></i></td>
-            <td><?php echo $v['firstname'].' '.$v['surname']; ?></td>
-            <td><?php echo $v['city']; ?></td>
-            <td>
-              <div class="btn-group">
-                <button class="btn btn-mini btn-default dropdown-toggle" data-toggle="dropdown">
-                    <i class="icon-cog"></i>
-                </button>
-                <ul class="dropdown-menu">
-                  <li><a href="<?php echo '/admin/accept/'.$v['id'];?>">Accept</a></li>
-                  <li><a href="<?php echo '/admin/declined/'.$v['id'];?>">Decline</a></li>
-                </ul>
-              </div>
-            </td>
-            </tr>
-            <?php endforeach; ?>
-        <?php else:?>
-            <tr class="status-pending"><td>No New Registration</td></tr>
-        <?php endif;?>
-        </tbody>
-        </table>
-    </div>
-</div>

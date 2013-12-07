@@ -3,18 +3,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class MY_Controller extends CI_Controller {
 	
+	
 	protected $_config = array(
-		'protocol' 		=> 'smtp',
-		'smtp_host' 	=> 'smtp.gmail.com',
-		'smtp_port' 	=> 25,
-		'smtp_timeout'	=> '25',
-		'crlf'				=> '\r\n',
-		'newline'				=> '\r\n',
-		//'smtp_crypto' 	=> 'ssl',
-		'smtp_user' 	=> '',
-		'smtp_pass' 	=> '',
-		'mailtype'  	=> 'html', 
-		'charset'   	=> 'iso-8859-1'
+		'protocol' => 'smtp',
+		'smtp_host' => 'ssl://smtp.gmail.com',
+		'smtp_port' => 465,
+		'smtp_user' => 'sybuena3@gmail.com',
+		'smtp_pass' => 'w@lkingd3@d',
+		'mailtype'  => 'html', 
+		'charset'   => 'iso-8859-1'
 	);
 	
 	public function __construct() {
@@ -23,23 +20,25 @@ class MY_Controller extends CI_Controller {
 		
 		//SET ALL LOADER HERE
 		$this->load->helper('url');
-		$this->load->library('email');
-		$this->load->model('user','',TRUE);
-		/*
-		$this->email->initialize($this->_config);
 		
-		// $this->email->initialize($config);
-
-        $this->email->from('sybuena2@gmail.com', 'myname');
-        $this->email->to('sybuena@gmail.com'); 
-
-        $this->email->subject('Email Test');
-        $this->email->message('Testing the email class.');  
-
-        $this->email->send();
-
-        echo $this->email->print_debugger();
-exit;*/
+		$this->load->model('user','',TRUE);
+	
+	  	$this->load->library('email');
+	  	$this->email->initialize($this->_config);
+	
+	}
+	
+	public function send($data) {
+		
+	 	$this->email->set_newline("\r\n");
+	  	$this->email->from($data['from_email'], $data['from_name']);
+	  	$this->email->to($data['to_email']);  
+	  	$this->email->subject($data['subject']);  
+	  	$this->email->message($data['content']);
+		
+	  	return $this->email->send();
+		//print_r($result);	
+	  	//echo $this->email->print_debugger();
 	}
 	
 	public function checkField() {
@@ -372,5 +371,21 @@ exit;*/
 );
 	}
 	
+	public function notification($type = 'approved') {
+		$this->db->select();
+		$this->db->from('newsletter');
+		
+		if($type == 'approved') {
+			$this->db->where('key', 'approved');
+		} else if($type == 'decline') {
+			$this->db->where('key', 'declined');
+		} else if($type == 'activate') { 
+			$this->db->where('key', 'activated');
+		}
+		
+		$query = $this->db->get()->row_array();
+		return $query['content'];
+		
+	}
 		
 }

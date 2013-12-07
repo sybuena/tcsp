@@ -25,7 +25,14 @@
     	<?php include('front/navbar.php');?>
   	</div>
 </div>  
-
+<?php if(isset($login) && !$login['is_ok']):?>
+<div class="alert alert-info display" id="trial">
+    <i class="icon-warning-sign icon-3x pull-left"></i> 
+    <h4>Heads up!</h4>
+    This alert needs your attention, this Account is not yet been activated please fill out the required 
+    <a href="/#Profile">documents</a> to activate your account...
+</div> 
+<?php endif; ?>        
 <!-- Content Region -->
 <div id="Home" class="content-toggle">
 	<?php include('front/content/home.php');?>
@@ -57,8 +64,12 @@
 	<?php include('front/content/privacy.php');?>
 </div>
 
+<div id="Profile" class="content-toggle" style="display:none"> 
+	<?php include('front/content/profile.php');?>
+</div>
+
 <div id="News" class="content-toggle" style="display:none">
-	<?php if(!empty($login)) : ?>
+	<?php if(!empty($login) && $login['is_ok']) : ?>
 		<?php include('front/content/event.php');?>
 	<?php else :?>	
 		<?php include('front/content/no_login.php');?>

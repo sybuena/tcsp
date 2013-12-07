@@ -75,6 +75,33 @@ $(document).ready(function() {
 		
 	}, interval);
 	
+	$('.view-docu').click(function() {
+		var id = $(this).attr('id');
+		$('#docu-modal .modal-body').html('');
+		$('#docu-modal .docu-accept').attr('href', '/admin/approve/1/'+id);
+		$('#docu-modal .docu-decline').attr('href', '/admin/approve/0/'+id);
+		
+		$.ajax({
+			type 		: 'GET',
+			dataType 	: 'json',
+			url 		: '/admin/getDocuments/'+id,
+			success		: function(data2) {
+				
+				for(i in data2) {
+					
+					$('#docu-modal .modal-body').append('<h5>'+data2[i].image_name+'</h5><img src="'+data2[i].image+'">');
+					//data2[i].image
+				}
+				
+			}, 
+			error : function(e) {
+			}			
+		});
+		
+		//show modal
+		$('#docu-modal').modal('show');
+	});
+	
 	$('#new-admin').click(function() {
 		
 		$('#error-add-new').hide();

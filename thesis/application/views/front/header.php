@@ -107,4 +107,11 @@ font-size: 18px;font-weight: bold;}
 float: left;
 margin-left: 50px;}
 .block {font-size:14px}
+.docu-holder {margin-left: 27px;
+margin-bottom: 20px;}
+#trial {width: 1124px;
+margin-bottom: 5px;
+margin-left: auto;
+margin-right: auto;
+margin-top: 5px;}
 </style>

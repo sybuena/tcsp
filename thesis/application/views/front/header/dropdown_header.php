@@ -24,7 +24,7 @@
             </address>
         </div>
         <!-- If there is a login user -->
-        <?php if(!empty($login)) :?>
+        <?php if(!empty($login) && $login['is_ok']) :?>
             <div class="span4">
                 <div class="colour-switcher">
                     <h3><?php echo $this->lang->line('online_admin');?></h3>

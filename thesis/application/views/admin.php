@@ -36,8 +36,18 @@
     <div id="stats" class="content-toggle">
 		<?php include('admin/content/stats.php');?>
 	</div>
+    <div id="newMember" class="content-toggle">
+		<?php include('admin/content/newMember.php');?>
+	</div>
     <div id="users" class="content-toggle">
 		<?php include('admin/content/users.php');?>
 	</div>
+    <div id="archive" class="content-toggle">
+		<?php include('admin/content/declined.php');?>
+	</div>
+    <div id="approve" class="content-toggle">
+		<?php include('admin/content/approve.php');?>
+	</div>
 </div>
+
 

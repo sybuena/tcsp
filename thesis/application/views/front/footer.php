@@ -63,6 +63,7 @@
 <script src="<?php echo base_url().'assets/ver2/js.js';?>" type="text/javascript"></script>
 
 
+    
 
 <script type="text/javascript">
 /*

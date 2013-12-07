@@ -6,11 +6,6 @@ class Home extends MY_Controller {
     public $outputData;		//Holds the output data for each view
 	public $loggedInUser;
 	
-	public function bark() {
-		
-		echo 'bawawwaw';
-	}
-	
 	public function index(){
 	
 		//$this->lang->lang();
@@ -22,17 +17,16 @@ class Home extends MY_Controller {
 		// Redirect if not logged
 		$sessionUserID = $this->session->userdata('front_logged_in');
 		if($sessionUserID) { 
-		//	redirect('/');
+	
+			//Get all users
+			$this->outputData['listOfUsers']	= $this->user->getAdminChat();
 		
-		
-		//Get all users
-		$this->outputData['listOfUsers']	= $this->user->getAdminChat();
-		
-		$userdata  = $this->session->all_userdata(); 
-		$this->outputData['session_dataa'] = $userdata;
+			$userdata  = $this->session->all_userdata(); 
+			$this->outputData['session_dataa'] = $userdata;
 		}
 		
 		$this->outputData['admin'] = 0;
+		
 		if(isset($sessionUserID) && !empty($sessionUserID)) {
 			if(isset($sessionUserID['usertype']) && $sessionUserID['usertype'] == 'admin') {
 				$this->outputData['admin'] = 1;	
@@ -40,16 +34,9 @@ class Home extends MY_Controller {
 		}
 		
 		
-		$this->outputData['header_1'] = $this->getBlocks('header_1');
-		$this->outputData['header_2'] = $this->getBlocks('header_2');
-		
-		$this->outputData['slide_1'] = $this->getBlocks('slide_1');
-		$this->outputData['slide_2'] = $this->getBlocks('slide_2');
-		
-		$this->outputData['block_1'] = $this->getBlocks('block_1');
-		$this->outputData['block_2'] = $this->getBlocks('block_2');
-		$this->outputData['block_3'] = $this->getBlocks('block_3');
 		$this->outputData['countryList'] = $this->_countryList();
+		$this->outputData['documents'] = $this->_getScannedDocu($sessionUserID['id']);
+		
 		//load lang here
 		$this->outputData['lang'] = 'english';
 	
@@ -60,11 +47,35 @@ class Home extends MY_Controller {
 			$this->lang->load('front', $this->outputData['lang']); 
 		} 
 		//default lang is english
-		
 		$this->lang->load('front', $this->outputData['lang']);
-		//exit;
+		
 		$this->load->frontTemplate('home',$this->outputData);
 	}
+	
+	public function upload() { 
+		//get login user 
+		$login = $this->session->userdata('front_logged_in');
+		//use user id for upload flag
+		$path = 'assets/'.$login['id'].'/';
+		//if user folder is no existing
+		if(!is_dir($path)) {
+			//create one
+    		mkdir($path);
+		}
+		//now move the file to the user folder
+		$targetPath = $path.basename($_FILES['fileData']['name'] );
+		move_uploaded_file( $_FILES['fileData']['tmp_name'], $targetPath);
+		//after moving the file we will now save the path to the database
+		$dataset = array(
+			'image_parent' 	=> $login['id'],
+			'image_name'	=> $_FILES['fileData']['name'],
+			'image'			=> $targetPath
+		);
+		$res = $this->db->insert('image', $dataset);
+		redirect('/#Profile');
+		//echo '<img src="'.$content.'">';
+	}
+	
 	
 	public function getBlocks($key) {
 		$query = $this->db->get_where('app_copy', array('key' => $key));
@@ -87,59 +98,13 @@ class Home extends MY_Controller {
 		redirect('/', 'refresh');
  	}
 	
-	public function notification($type = 'approved') {
-		if($type == 'approved') {
-			$html = '<p>
-Hi {registrant.firstname},
-</p>
-
-<p>
-Thank you for your recent application for Taiwanese Chamber of the South Philippines. <br />
-After careful review of your application, we decided to accept your application. From now you can use your account to sign in to our website together with all the information you provided</p>
-
-<p>Taiwanese Chamber of the South Philippines<br />
-+63 046 4303475<br />
-tcsp.assoc@gmail.com<br />
-No. 13 5th Street Golden Mile Business Park, Carmona, Cavite.<br />
-
-</p>
-<p>Regards,<br>
-Administrator
-</p>
-
-<small><hr>
-Email sent via tcsp in response to an online registration.
-</small>';
-		} else {
-		$html = '<p>
-Hi {registrant.firstname},
-</p>
-
-<p>
-Thank you for your recent application for Taiwanese Chamber of the South Philippines. <br />
-Unfortunately, after careful review of your application, we must decline your application request at this time
-</p>
-<p>
-
-If you feel that you have information that will make a difference, please contact us at:
-</p>
-
-<p>Taiwanese Chamber of the South Philippines<br />
-+63 046 4303475<br />
-tcsp.assoc@gmail.com<br />
-No. 13 5th Street Golden Mile Business Park, Carmona, Cavite.<br />
-
-</p>
-<p>Regards,<br>
-Administrator
-</p>
-
-<small><hr>
-Email sent via tcsp in response to an online registration.
-</small>';
-		}
-		echo $html;
+	protected function _getScannedDocu($id) {
+		return $this->db->select()
+			->from('image')
+			->where('image_parent', $id)
+			->get()->result_array();
 	}
+	
 	
 }
 
