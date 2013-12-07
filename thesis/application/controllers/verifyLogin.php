@@ -105,7 +105,7 @@ class VerifyLogin extends MY_Controller {
 		
 		//query the database
 		$result = $this->user->login($username, $password);
-		echo '<pre>';print_r($result); exit;
+		
 		if($result) {
 			
 			$this->session->set_userdata('logged_in', $result);

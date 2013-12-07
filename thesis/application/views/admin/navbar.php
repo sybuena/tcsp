@@ -52,6 +52,7 @@
                 </li>
             </ul>
         </li>
+         
         <li class="">
           <span class="glow"></span>
           <a href="#message">
@@ -64,13 +65,33 @@
           </a>
         </li>
         
-        <li class="">
-          <span class="glow"></span>
-          <a href="#admin">
-              <i class="icon-key"></i>    
-              <span>Administrator</span>
-              
-          </a>
+         <li class="dark-nav">
+            <span class="glow"></span>
+            <a class="accordion-toggle collapsed" data-toggle="collapse" href="#admins">
+                <i class="icon-key icon-2x"></i>
+                <span>
+                  Administrator
+                    
+                <i class="icon-caret-down"></i>
+                </span>
+            </a>                
+            <ul id="admins" class="collapse ">
+                <li class="">
+                    <a href="#signup">
+                      <i class="icon-plus-sign"></i> 
+                      
+                      Add Administrator
+                    </a>
+                </li>
+                <li class="">
+                    <a href="#admin-list">
+                      <i class="icon-group "></i> 
+                      <span class="label label-info" id="user-counter"> <?php echo count($newRegister); ?> </span>
+                      Administrator list
+                    </a>
+                </li>
+            </ul>
         </li>
+        
     </ul>
 </div>

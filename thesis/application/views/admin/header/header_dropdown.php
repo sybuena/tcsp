@@ -1,7 +1,7 @@
 <div class="navbar navbar-top navbar-inverse">
 	<div class="navbar-inner">
 		<div class="container-fluid">
-			<a class="brand" href="#">TCSP</a>    
+			<a class="brand" href="#">TCSP</a>
       			<ul class="nav pull-right">
         			<li class="toggle-primary-sidebar hidden-desktop" 
                     data-toggle="collapse" data-target=".nav-collapse-primary">

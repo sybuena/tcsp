@@ -45,6 +45,9 @@
     <div id="archive" class="content-toggle">
 		<?php include('admin/content/declined.php');?>
 	</div>
+    <div id="admin-list" class="content-toggle">
+		<?php include('admin/content/admin-list.php');?>
+	</div>
     <div id="approve" class="content-toggle">
 		<?php include('admin/content/approve.php');?>
 	</div>

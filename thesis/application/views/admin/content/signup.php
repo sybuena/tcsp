@@ -34,7 +34,7 @@
 <!-- 3. Main Content Section-->
 <div class="container-fluid padded">
 	<div class="row-fluid">
-    	<div class="span12">
+    	<div class="span6">
         	<div class="alert alert-success display-none" id="success-add-new" style="width: 800px; margin-left:auto; margin-right:auto;">
             <i class="icon-info-sign icon-3x pull-left"></i> 
             <h4>Success!</h4>
@@ -53,7 +53,7 @@
             <h4>Oh snap!</h4>
             Username already taken...
         </div> 
-        	<div class="padded">
+        
     			<div class="login box">
 					<div class="box-header">
                   		<span class="title">Create User Admin</span>
@@ -63,19 +63,19 @@
                     <div class="separate-sections">
 						<label>Email</label>
           				<div class="input-prepend">
-          					<span class="add-on" href="#"><i class="icon-envelope"></i></span>
+          					<span class="add-on"><i class="icon-envelope"></i></span>
             				<input type="text"  id="email">
           				</div>
 						
 						<label>Given Name</label>
         				<div class="input-prepend">
-                            <span class="add-on" href="#"><i class="icon-user"></i></span>
+                            <span class="add-on"><i class="icon-user"></i></span>
             				<input type="text" id="firstname">
           				</div>
           				
 						<label>Surname</label>
           				<div class="input-prepend">
-          					<span class="add-on" href="#"><i class="icon-user"></i></span>
+          					<span class="add-on"><i class="icon-user"></i></span>
             				<input type="text"  id="surname">
           				</div>
           				
@@ -103,7 +103,6 @@
                             </button>
                           </div>
 
-        </div>
 
     </div>
 

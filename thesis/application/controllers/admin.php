@@ -34,7 +34,8 @@ class admin extends MY_Controller {
 		$data['memberList']  = json_decode(json_encode($this->user->getUser()), true);
 		$data['location'] 	 = $this->getByLocation($data['memberList']);
 		$data['date'] 	 = $this->getByDate($data['memberList']);
-				
+		$data['adminList'] 	 = $this->getAdmin();
+		
 		$this->load->adminTemplate('admin', $data);
 	}
 	
@@ -51,6 +52,14 @@ class admin extends MY_Controller {
 		} else {
 			$this->_declinedUser($id);
 		}
+	}
+	public function getAdmin() {
+		
+		return $this->db->select()
+			->from('user')
+			->where('usertype', 'admin')
+			->or_where('usertype', 'super-admin')
+			->get()->result_array();
 	}
 	
 	public function getMessage() {
