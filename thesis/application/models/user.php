@@ -7,13 +7,10 @@ Class User extends CI_Model {
    		$this->db->select('id, username, firstname, surname, created, email, city, company-name, position, usertype');
 	   	$this->db->from('user');
 	   	$this->db->where('username', $username);
-	   	$this->db->where('password', md5($password));
-	   	$this->db->where('usertype', 'admin');
-	   	$this->db->or_where('usertype', 'super-admin');
-	   	$this->db->limit(1);
-
-		$query = $this->db->get();
-	
+	   	//$this->db->where('password', md5($password));
+	   	$this->db->where('password', $password);
+	   	$this->db->where('(`usertype` = "admin" OR `usertype` = "super-admin")');
+	   	$query = $this->db->get();
 		if($query->num_rows() == 1) {
 			$res = $query->row_array();
 			
@@ -33,7 +30,8 @@ Class User extends CI_Model {
 	   	$this->db->join('payment', 'payment.payment_user = user.ID');
 		
 		$this->db->where('user.username', $username);
-	   	$this->db->where('user.password', md5($password));
+	   	$this->db->where('user.password', $password);
+	   	//$this->db->where('user.password', md5($password));
 		$this->db->where('(payment.is_ok = 1 OR payment.payment_plan = "trial")');
 		
 	   	$this->db->limit(1);

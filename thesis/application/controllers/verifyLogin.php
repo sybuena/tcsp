@@ -30,7 +30,7 @@ class VerifyLogin extends MY_Controller {
 		$query 		= $this->db->get_where('user', array('username' => $_POST['data']['username']));
 		$username 	= $query->result_array();
 		//convert password to md5
-		$_POST['data']['password'] = md5($_POST['data']['password']);
+		//$_POST['data']['password'] = md5($_POST['data']['password']);
 		
 		if(!empty($username)) {
 			echo json_encode(array('result'=>0,'error'=>'username already taken'));
